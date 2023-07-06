@@ -1,0 +1,21 @@
+<!-- <h1>Documentaryfilms#new</h1>
+<p>Find me in app/views/documentaryfilms/new.html.erb</p> -->
+
+<h1>Nuevo Documentary Film</h1>
+<%= form_with url: documentaryfilms_create_path, model: @documentaryfilm, method: :post do |form| %>
+  <div>
+    <%= form.label :name, "Ingresa Tu Documentary Film" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :synopsis, "Cuentame de tu Documentary" %>
+    <%= form.text_area :synopsis %>
+  </div>
+  <div>
+    <%= form.label :director, "Dime el Director" %>
+    <%= form.text_field :director %>
+  </div>
+  <div>
+    <%= form.submit "Guardar" %>
+  </div>
+<% end %>
